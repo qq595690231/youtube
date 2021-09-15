@@ -1,5 +1,13 @@
+/*
+ * @Author: aze
+ * @Date: 2021-09-15 09:09:08
+ * @LastEditors: aze
+ * @LastEditTime: 2021-09-15 11:32:45
+ * @Description: 
+ * @FilePath: \o\middleware\errorhandler.js
+ */
 // app/middleware/error_handler.js
-module.exports = () => {
+module.exports = () => {//外层函数负责接收参数
   return async function errorHandler (ctx, next) {
     try {
       await next();

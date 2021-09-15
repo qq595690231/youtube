@@ -2,19 +2,19 @@ const Controller = require('egg').Controller
 
 class UserController extends Controller {
   async create () {
-    this.ctx.body = 'user create'
     // const body = this.ctx.request.body
-    // this.ctx.validate({
-    //   email: { type: 'email' },
-    //   username: { type: 'string' },
-    //   password: { type: 'string' }
-    // })
-    // if (await userService.findByUsername(body.username)) {
-    //   this.ctx.throw(422, '用户已存在')
-    // }
-    // if (await userService.findByUserEmail(body.email)) {
-    //   this.ctx.throw(422, 'yx已存在')
-    // }
+    this.ctx.validate({
+      email: { type: 'email' },
+      username: { type: 'string' },
+      password: { type: 'string' }
+    })
+    this.ctx.body = 'user create'
+    if (await userService.findByUsername(body.username)) {
+      this.ctx.throw(422, '用户已存在')
+    }
+    if (await userService.findByUserEmail(body.email)) {
+      this.ctx.throw(422, 'yx已存在')
+    }
     // // 保存用户
     // const user = await userService.createUser(body)
 
