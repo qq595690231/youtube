@@ -2,7 +2,7 @@
  * @Author: aze
  * @Date: 2021-09-09 17:01:44
  * @LastEditors: aze
- * @LastEditTime: 2021-09-15 13:46:04
+ * @LastEditTime: 2021-09-15 17:05:39
  * @Description: 
  * @FilePath: \o\config\config.default.js
  */
@@ -18,13 +18,14 @@ module.exports = appInfo => {
    * built-in config
    * @type {Egg.EggAppConfig}
    **/
-  const config = exports = {};
+  const config = (exports = {});
 
   // use for cookie sign key, should change to your own and keep security
   config.keys = appInfo.name + '_1631178091151_7190';
 
   // add your middleware config here
-  config.middleware = [];
+  config.middleware = ['errorhandler'];
+  // config.middleware = [];
 
   // add your user config here
   const userConfig = {
