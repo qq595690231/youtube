@@ -2,7 +2,7 @@
  * @Author: aze
  * @Date: 2021-09-09 17:01:44
  * @LastEditors: aze
- * @LastEditTime: 2021-09-15 17:05:39
+ * @LastEditTime: 2021-09-15 20:45:59
  * @Description: 
  * @FilePath: \o\config\config.default.js
  */
@@ -39,7 +39,7 @@ module.exports = appInfo => {
       },
       plugins: []
     }
-  };
+  }
 
   config.security = {
     csrf: {
